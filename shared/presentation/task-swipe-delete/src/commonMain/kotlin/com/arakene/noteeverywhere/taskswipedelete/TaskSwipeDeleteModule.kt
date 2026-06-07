@@ -1,0 +1,3 @@
+package com.arakene.noteeverywhere.taskswipedelete
+
+object TaskSwipeDeleteModule

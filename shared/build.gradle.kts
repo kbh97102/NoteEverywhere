@@ -41,6 +41,11 @@ kotlin {
             implementation(libs.compose.uiToolingPreview)
         }
         commonMain.dependencies {
+            implementation(project(":shared:data"))
+            implementation(project(":shared:presentation:home"))
+            implementation(project(":shared:presentation:task-create"))
+            implementation(project(":shared:presentation:task-edit"))
+            implementation(project(":shared:presentation:task-swipe-delete"))
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)
