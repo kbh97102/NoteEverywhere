@@ -86,6 +86,7 @@ Use:
 - Additional presentation modularization
 - Separate DesignSystem module
 - Feature-specific UI modules
+- Shared single DesignSystem across Android, iOS, and macOS
 
 Dependency direction:
 
@@ -113,6 +114,8 @@ Use this role split as the baseline:
 - `:app:macos`
 
 Module names can be adjusted to fit Gradle conventions, but the role separation must remain.
+
+Android, iOS, and macOS must use the same DesignSystem tokens. Do not create platform-specific color, typography, or shape forks.
 
 ## UI Implementation Rules
 
@@ -152,6 +155,8 @@ Recommended roles:
 - Do not call repositories directly from composables.
 - Do not put domain logic inside UI components.
 - Use DesignSystem tokens instead of hardcoded design values.
+- Use the same DesignSystem tokens across Android, iOS, and macOS.
+- Handle platform differences through adaptive layout, not separate themes.
 - Keep preview/sample data separate from domain logic.
 
 ## MVI Rules
